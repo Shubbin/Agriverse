@@ -14,34 +14,34 @@ export default function LandingPage({ onNavigate }) {
           <div className="absolute inset-0 z-0">
             <img 
               className="w-full h-full object-cover" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsAr0tNm3O97HzjCY4dbNkmqZy9tTAX4bCqyc0EK-kvpGEEXnDaSXbsSnSU-xjiAIGbF6kbY3MVoZax4tL8X9Ai9UXq3TIEnDWecyZnQwsqXyaeKrgtU7OXH8KQUdLZLk2ol0JwH-xDogqH1q1RCGDS6E7wewivIPBYemLvgsckEurBY0Iyd4m91-piKL4QDAIz2NIsbwm61W3pvtzifUkpIEUWIAIbN7aXBBCXOgcQLMN_WMWoBuy2dpqfKDvaqYx67c0yWcrCmU" 
-              alt="Proud African farmer standing in a lush field"
+              src="/hero_bg.png" 
+              alt="Nigerian agricultural field under a warm sunrise"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
           </div>
           
           {/* Content */}
-          <div className="relative z-10 max-w-2xl bg-white/80 backdrop-blur-md p-8 rounded-2xl border border-outline-variant shadow-xl">
+          <div className="relative z-10 max-w-2xl md:mb-12">
             <span className="inline-block px-3 py-1 mb-4 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold uppercase tracking-wider">
               Bankable Agriculture
             </span>
             <h1 className="text-4xl md:text-5xl font-black text-on-surface mb-4 leading-tight">
               Transform Your Farming into a <span className="text-primary">Bankable Business.</span>
             </h1>
-            <p className="text-base md:text-lg text-outline mb-6 leading-relaxed">
+            <p className="text-base md:text-lg text-on-surface-variant mb-6 leading-relaxed">
               The digital pipeline for the modern African farmer. Learn 3MTT modules, monitor crop health with Gemini AI, secure trade with OPay Escrow, and access expansion credit.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 w-full">
+            <div className="flex flex-col sm:flex-row gap-3 w-full max-w-md">
               <button 
                 onClick={() => onNavigate('register')}
-                className="flex-1 bg-primary text-on-primary py-4 rounded-xl font-bold shadow-lg hover:bg-primary/95 active:scale-95 transition-all duration-200 flex justify-center items-center gap-2 cursor-pointer"
+                className="flex-grow bg-primary text-on-primary py-4 px-6 rounded-xl font-bold shadow-lg hover:bg-primary/95 active:scale-95 transition-all duration-200 flex justify-center items-center gap-2 cursor-pointer"
               >
                 Get Started
                 <span className="material-symbols-outlined">arrow_forward</span>
               </button>
               <button 
                 onClick={() => onNavigate('login')}
-                className="flex-1 bg-white border border-outline-variant py-4 rounded-xl font-semibold text-on-surface-variant hover:bg-surface-container-low active:scale-95 transition-all duration-200 cursor-pointer"
+                className="flex-grow bg-white border border-outline-variant py-4 px-6 rounded-xl font-semibold text-on-surface-variant hover:bg-surface-container-low active:scale-95 transition-all duration-200 cursor-pointer"
               >
                 Go to Portal Dashboard
               </button>
