@@ -141,26 +141,7 @@ export default function LandingPage({ onNavigate }) {
           </div>
         </section>
 
-        {/* Testimonial Splash */}
-        <section className="bg-surface-container-highest px-6 py-20 text-center">
-          <div className="max-w-3xl mx-auto flex flex-col items-center">
-            <span className="material-symbols-outlined text-primary text-6xl mb-6" style={{ fontVariationSettings: "'FILL' 1" }}>format_quote</span>
-            <blockquote className="text-xl md:text-2xl font-medium italic text-on-surface mb-8 leading-relaxed">
-              "AgriVerse didn't just give me an app; they gave me a financial identity. I finished my poultry course, unlocked a startup loan via my OPay wallet, and my yield increased by 40% in just one season."
-            </blockquote>
-            <div className="flex flex-col items-center">
-              <div className="w-20 h-20 rounded-full border-2 border-primary mb-3 overflow-hidden shadow-md">
-                <img 
-                  className="w-full h-full object-cover" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIE2Sf1Tl6oPT27wp0VcnVX88Dg4trjrx-kSeB0TftFL0w8Qok04vXnRkUsb_1GTkEPLgW3p_HI4H-3XSTZce0UC7lJCkZSOriBQMn4PavCSI7HPYzHcVbY--sxG-jhQYWl5YngZdji4TOGu1DMNgr9rfsBlMmNbCl36MIjrajDWKnBFXX0L7dOYmg8acbHoisfCEH1fH4bDqw8HeTtoPyg3-NJqUs5B5QgbwkkEu2r8fiLSLbwYWF3-Psag-m1IX5_mtoJjERJSA" 
-                  alt="Aminat Okonjo"
-                />
-              </div>
-              <div className="font-bold text-on-surface text-lg">Aminat Okonjo</div>
-              <div className="text-xs text-outline uppercase tracking-wider font-semibold">Verified Agri-Entrepreneur (Ogun State)</div>
-            </div>
-          </div>
-        </section>
+
 
         {/* CTA Section */}
         <section className="px-6 py-20 bg-primary text-on-primary text-center">

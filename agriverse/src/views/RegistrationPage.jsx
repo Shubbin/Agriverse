@@ -5,10 +5,17 @@ export default function RegistrationPage({ onNavigate, onRegisterSuccess }) {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [errorMsg, setErrorMsg] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setErrorMsg('');
+    if (password !== confirmPassword) {
+      setErrorMsg('Passwords do not match.');
+      return;
+    }
     setIsSubmitting(true);
     setTimeout(() => {
       setIsSubmitting(false);
@@ -136,13 +143,29 @@ export default function RegistrationPage({ onNavigate, onRegisterSuccess }) {
               </div>
             </div>
 
-            <div className="bg-surface-container-low p-3 rounded-xl border border-outline-variant/30 flex items-start gap-2">
-              <span className="material-symbols-outlined text-tertiary-container mt-0.5">info</span>
-              <div className="text-xs text-on-surface-variant leading-relaxed">
-                <p className="font-semibold text-on-surface">Verification Info</p>
-                Verification via 3MTT automatically pulls your current course credits and credentials.
+            <div>
+              <label className="text-xs font-bold text-on-surface-variant block mb-1">Confirm Password</label>
+              <div className="relative">
+                <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">lock</span>
+                <input 
+                  required
+                  type="password" 
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  placeholder="••••••••"
+                  className="w-full pl-10 pr-4 py-3 bg-surface border border-outline-variant rounded-xl text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+                />
               </div>
             </div>
+
+            {errorMsg && (
+              <div className="p-3 bg-red-50 border border-red-200 rounded-xl text-red-600 text-xs font-semibold flex items-center gap-1.5">
+                <span className="material-symbols-outlined text-sm">error</span>
+                {errorMsg}
+              </div>
+            )}
+
+
 
             <button 
               type="submit"

@@ -33,12 +33,9 @@ export default function LoginPage({ onNavigate, onLoginSuccess }) {
         </div>
         <div className="relative z-10 max-w-md">
           <h2 className="text-3xl font-black mb-4">Empowering Productivity</h2>
-          <p className="opacity-90 leading-relaxed mb-6">
+          <p className="opacity-90 leading-relaxed">
             Log in to consult your Gemini Farm Guard, track your active market sales, and check your credit status with OPay.
           </p>
-          <div className="p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20">
-            <p className="text-sm font-semibold italic">"94% of AgriVerse partners reported faster credit approval using our verified smart contracts."</p>
-          </div>
         </div>
         <div className="relative z-10 text-xs opacity-60">
           © 2026 AgriVerse. Bank-grade security standards.
@@ -58,12 +55,7 @@ export default function LoginPage({ onNavigate, onLoginSuccess }) {
           </div>
 
           <div className="bg-white border border-outline-variant p-6 rounded-2xl shadow-sm relative overflow-hidden">
-            <div className="flex justify-center mb-6">
-              <span className="inline-flex items-center gap-2 bg-secondary-container/20 px-4 py-1.5 rounded-full border border-secondary-container/40">
-                <span className="material-symbols-outlined text-secondary text-base">verified_user</span>
-                <span className="text-on-secondary-container text-xs font-semibold uppercase tracking-wider">Secure Portal</span>
-              </span>
-            </div>
+
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
@@ -83,7 +75,13 @@ export default function LoginPage({ onNavigate, onLoginSuccess }) {
               <div>
                 <div className="flex justify-between items-center mb-1">
                   <label className="text-xs font-bold text-on-surface-variant block">Password</label>
-                  <a href="#" className="text-xs font-bold text-primary hover:underline">Forgot?</a>
+                  <button 
+                    type="button"
+                    onClick={() => onNavigate('forgot')}
+                    className="text-xs font-bold text-primary hover:underline cursor-pointer bg-transparent border-0"
+                  >
+                    Forgot?
+                  </button>
                 </div>
                 <div className="relative">
                   <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">lock</span>

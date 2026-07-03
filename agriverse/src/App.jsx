@@ -3,6 +3,7 @@ import LandingPage from './views/LandingPage';
 import LoginPage from './views/LoginPage';
 import RegistrationPage from './views/RegistrationPage';
 import OnboardingPage from './views/OnboardingPage';
+import ForgotPasswordPage from './views/ForgotPasswordPage';
 import DashboardPage from './views/DashboardPage';
 import GeminiChatPanel from './components/chat/GeminiChatPanel';
 
@@ -63,6 +64,7 @@ function App() {
       {view === 'landing' && <LandingPage onNavigate={setView} />}
       {view === 'login' && <LoginPage onNavigate={setView} onLoginSuccess={handleLoginSuccess} />}
       {view === 'register' && <RegistrationPage onNavigate={setView} onRegisterSuccess={handleRegisterSuccess} />}
+      {view === 'forgot' && <ForgotPasswordPage onNavigate={setView} />}
       {view === 'onboarding' && <OnboardingPage onSelectPath={handleSelectPath} onNavigate={setView} />}
       {view === 'dashboard' && (
         <DashboardPage 
