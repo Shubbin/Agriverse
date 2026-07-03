@@ -51,7 +51,7 @@ export default function LearningPage({ currentPath }) {
   };
 
   return (
-    <div className="space-y-6 pb-12">
+    <div className="space-y-6 pb-24">
       {/* Overview */}
       <section className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>

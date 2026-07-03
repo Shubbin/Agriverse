@@ -7,7 +7,7 @@ export default function DashboardPage({ userName, currentPath, onNavigate, onOpe
   const [subView, setSubView] = useState('home'); // 'home' | 'learning' | 'market' | 'wallet'
 
   return (
-    <div className="flex flex-col min-h-screen bg-slate-50 pb-24">
+    <div className="flex flex-col min-h-screen bg-slate-50 pb-36">
       {/* Top Header Navigation */}
       <header className="bg-white border-b border-outline-variant w-full sticky top-0 z-40">
         <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">

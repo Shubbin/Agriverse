@@ -8,7 +8,7 @@ export default function Header({ onNavigate }) {
           <span className="material-symbols-outlined text-primary text-3xl font-bold" style={{ fontVariationSettings: "'FILL' 1" }}>agriculture</span>
           <span className="text-2xl font-bold text-primary tracking-tight">AgriVerse</span>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="hidden md:flex items-center gap-3">
           <button 
             onClick={() => onNavigate('login')}
             className="px-4 py-2 text-primary font-semibold hover:bg-surface-container-low rounded-lg transition-all duration-200 cursor-pointer"

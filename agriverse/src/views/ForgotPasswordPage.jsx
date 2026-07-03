@@ -43,7 +43,7 @@ export default function ForgotPasswordPage({ onNavigate }) {
       </div>
 
       {/* Form Area */}
-      <div className="flex-1 bg-surface-container-lowest flex items-center justify-center p-6 md:p-16">
+      <div className="flex-grow bg-surface-container-lowest flex items-center justify-center py-12 px-6 md:p-16 overflow-y-auto">
         <div className="w-full max-w-md">
           <div className="md:hidden flex items-center gap-2 mb-8 cursor-pointer" onClick={() => onNavigate('landing')}>
             <span className="material-symbols-outlined text-primary text-3xl font-bold">agriculture</span>
