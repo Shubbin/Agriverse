@@ -2,12 +2,14 @@ import { useState } from 'react';
 import LandingPage from './views/LandingPage';
 import LoginPage from './views/LoginPage';
 import RegistrationPage from './views/RegistrationPage';
+import OnboardingPage from './views/OnboardingPage';
 import DashboardPage from './views/DashboardPage';
 import GeminiChatPanel from './components/chat/GeminiChatPanel';
 
 function App() {
-  const [view, setView] = useState('landing');
+  const [view, setView] = useState('landing'); // 'landing' | 'login' | 'register' | 'onboarding' | 'dashboard'
   const [userName, setUserName] = useState('Samuel');
+  const [currentPath, setCurrentPath] = useState('Beginner');
   const [isAiOpen, setIsAiOpen] = useState(false);
   const [chatMessages, setChatMessages] = useState([
     { sender: 'gemini', text: "Hello Samuel! I am your Gemini AI Farm Guard. How can I help you with your crops, weather, or loans today?" }
@@ -25,7 +27,7 @@ function App() {
       } else if (lowercaseMsg.includes('rain') || lowercaseMsg.includes('weather')) {
         botResponse = "Weather Alert: Heavy rain (25mm) is forecasted for Kaduna in the next 2 days. The humidity will rise to 85%. Good time for liquid fertilizer application has passed; wait until the heavy rain subsides.";
       } else if (lowercaseMsg.includes('loan') || lowercaseMsg.includes('credit')) {
-        botResponse = "Your current Credit Readiness Score is 720 (Gold Status). You qualify for the Phase 2 Startup Loan of ₦250,000 via OPay. Would you like me to guide you through the application?";
+        botResponse = "Your current Credit Readiness Score is 720 (Gold Status). You qualify for the pre-approved loan via OPay. Would you like me to guide you through the application?";
       } else if (lowercaseMsg.includes('market') || lowercaseMsg.includes('price')) {
         botResponse = "Current wholesale market rates in Kaduna: Maize is trading at ₦38,500 per bag (+2.4%), Rice (long grain) is at ₦54,000 per bag (-0.8%). Wholesalers are active today.";
       } else {
@@ -48,6 +50,11 @@ function App() {
 
   const handleRegisterSuccess = (name) => {
     setUserName(name || 'Samuel');
+    setView('onboarding'); // Go to onboarding path selection
+  };
+
+  const handleSelectPath = (path) => {
+    setCurrentPath(path);
     setView('dashboard');
   };
 
@@ -56,9 +63,11 @@ function App() {
       {view === 'landing' && <LandingPage onNavigate={setView} />}
       {view === 'login' && <LoginPage onNavigate={setView} onLoginSuccess={handleLoginSuccess} />}
       {view === 'register' && <RegistrationPage onNavigate={setView} onRegisterSuccess={handleRegisterSuccess} />}
+      {view === 'onboarding' && <OnboardingPage onSelectPath={handleSelectPath} onNavigate={setView} />}
       {view === 'dashboard' && (
         <DashboardPage 
           userName={userName} 
+          currentPath={currentPath}
           onNavigate={setView} 
           onOpenAi={() => setIsAiOpen(true)} 
         />
