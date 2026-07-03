@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AgriVerse | Profile Setup</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#c28b0f",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed-variant": "#005233",
+                    "secondary": "#3b6756",
+                    "secondary-fixed-dim": "#a2d1bb",
+                    "on-secondary-fixed": "#002116",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-container": "#3e2a00",
+                    "surface-container-low": "#f1f4f2",
+                    "on-secondary-fixed-variant": "#234f3f",
+                    "on-secondary": "#ffffff",
+                    "surface-tint": "#006c45",
+                    "primary-container": "#1fa971",
+                    "secondary-fixed": "#beedd7",
+                    "primary-fixed": "#7ffaba",
+                    "surface-container-high": "#e5e9e7",
+                    "on-secondary-container": "#406b5a",
+                    "tertiary": "#7d5800",
+                    "on-surface": "#181c1c",
+                    "surface-dim": "#d7dbd9",
+                    "background": "#f6faf8",
+                    "on-primary-fixed": "#002112",
+                    "on-error-container": "#93000a",
+                    "outline-variant": "#bccabf",
+                    "primary": "#006c45",
+                    "on-primary-container": "#003520",
+                    "tertiary-fixed-dim": "#fabc45",
+                    "surface-variant": "#dfe3e1",
+                    "secondary-container": "#bbead4",
+                    "inverse-surface": "#2d3130",
+                    "error": "#ba1a1a",
+                    "on-background": "#181c1c",
+                    "surface-container": "#ebefed",
+                    "inverse-primary": "#61dda0",
+                    "on-tertiary-fixed-variant": "#5f4100",
+                    "on-primary": "#ffffff",
+                    "primary-fixed-dim": "#61dda0",
+                    "on-surface-variant": "#3d4a41",
+                    "surface-container-highest": "#dfe3e1",
+                    "surface-container-lowest": "#ffffff",
+                    "outline": "#6d7a71",
+                    "on-tertiary-fixed": "#271900",
+                    "surface-bright": "#f6faf8",
+                    "surface": "#f6faf8",
+                    "inverse-on-surface": "#eef2f0",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#ffdea9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xl": "80px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "xs": "4px",
+                    "lg": "48px",
+                    "sm": "12px",
+                    "base": "8px",
+                    "md": "24px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Inter"],
+                    "headline-sm": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8faf8;
+        }
+        .option-card {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .option-card.active {
+            border-color: #1FA971;
+            background-color: rgba(31, 169, 113, 0.04);
+            box-shadow: 0px 4px 20px rgba(31, 169, 113, 0.08);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col items-center">
+<!-- Top Navigation Shell (Onboarding Context: No Nav Links) -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 bg-white border-b border-outline-variant/30">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md font-extrabold text-primary">AgriVerse</span>
+</div>
+<div class="flex items-center gap-sm">
+<button class="text-on-surface-variant font-label-md hover:bg-surface-container-high px-4 py-2 rounded-lg transition-colors">Save &amp; Exit</button>
+</div>
+</header>
+<main class="w-full max-w-[1280px] px-margin-mobile md:px-margin-desktop pt-32 pb-xl flex flex-col items-center">
+<!-- Progress Indicator -->
+<div class="w-full max-w-2xl mb-lg">
+<div class="flex justify-between items-center mb-xs">
+<span class="font-label-md text-primary uppercase tracking-wider">Step 1 of 4</span>
+<span class="font-label-md text-on-surface-variant">Profile Setup</span>
+</div>
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/4 rounded-full transition-all duration-700 ease-out"></div>
+</div>
+</div>
+<!-- Main Onboarding Card -->
+<div class="bg-surface-container-lowest border border-outline-variant shadow-[0px_4px_12px_rgba(0,0,0,0.03)] rounded-xl p-md md:p-lg w-full max-w-4xl">
+<div class="text-center mb-lg">
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-2">Tell us about yourself</h1>
+<p class="font-body-md text-on-surface-variant max-w-lg mx-auto">Welcome to the AgriVerse ecosystem. Select the path that best describes your current journey to help us tailor your experience.</p>
+</div>
+<!-- Two Distinct Paths Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<!-- Path 1: Beginner -->
+<div class="option-card group cursor-pointer border border-outline-variant p-md md:p-lg rounded-xl flex flex-col hover:border-primary/50 bg-white" id="path-beginner" onclick="selectPath('beginner')">
+<div class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary" style="font-size: 28px;">school</span>
+</div>
+<h3 class="font-headline-sm text-on-surface mb-sm">I am a Beginner</h3>
+<p class="font-body-sm text-on-surface-variant mb-md flex-grow">For aspiring farmers or those starting out. We’ll guide you through our Digital Pipeline, starting with the 3MTT foundational modules and agricultural basics.</p>
+<ul class="space-y-2 border-t border-outline-variant/30 pt-md">
+<li class="flex items-center gap-xs font-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Structured Learning Hub access
+                        </li>
+<li class="flex items-center gap-xs font-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Guided setup for small-scale plots
+                        </li>
+<li class="flex items-center gap-xs font-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Pathway to your first agricultural loan
+                        </li>
+</ul>
+</div>
+<!-- Path 2: Established -->
+<div class="option-card group cursor-pointer border border-outline-variant p-md md:p-lg rounded-xl flex flex-col hover:border-primary/50 bg-white" id="path-established" onclick="selectPath('established')">
+<div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-primary" style="font-size: 28px;">trending_up</span>
+</div>
+<h3 class="font-headline-sm text-on-surface mb-sm">I am an Established Farmer</h3>
+<p class="font-body-sm text-on-surface-variant mb-md flex-grow">For active farmers looking to scale operations. Leverage AI-driven insights to optimize yield and fast-track your expansion credit score.</p>
+<ul class="space-y-2 border-t border-outline-variant/30 pt-md">
+<li class="flex items-center gap-xs font-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Advanced AI yield forecasting
+                        </li>
+<li class="flex items-center gap-xs font-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Direct access to Marketplace buyers
+                        </li>
+<li class="flex items-center gap-xs font-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Expansion loan verification portal
+                        </li>
+</ul>
+</div>
+</div>
+<!-- Navigation Actions -->
+<div class="mt-lg pt-lg border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-md">
+<div class="flex items-center gap-sm bg-surface-container p-3 rounded-lg border border-outline-variant/20">
+<span class="material-symbols-outlined text-tertiary">info</span>
+<p class="font-body-sm text-on-surface-variant">Don't worry, you can always update these preferences later in Settings.</p>
+</div>
+<button class="w-full md:w-auto px-12 py-3 bg-outline text-white font-label-md rounded-xl transition-all cursor-not-allowed opacity-50 flex items-center justify-center gap-2" disabled="" id="next-button">
+                    Next
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Atmospheric Background Image (Small Scale) -->
+<div class="mt-xl grid grid-cols-1 md:grid-cols-2 gap-gutter w-full max-w-4xl opacity-80">
+<div class="h-32 rounded-xl overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="A professional close-up of a modern farmer checking a digital tablet in a lush, green tomato field in Nigeria. The sunlight is warm and golden, highlighting the productivity and dignity of African agriculture. The aesthetic is crisp, high-resolution, and corporate-modern, emphasizing technology integration in traditional farming." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPhgWGNVwTw9eFG6wu8Xh5wUhR7uDUsO7xqLXAhnB7eJpKcXKlfbwq9_AaJrktTMmjQw1echZqcfJSfYsLoyneRPqhOCBc5y5Iwt9JycSzfuvFtljlyQ2j-qNrMVFGv0IAKrQULdLmnM2yaw3JuVrHKNv4ymAoK6oLkos_YahEOzmZCNUf9hpK593XjwHgbF9COWsqogCzgvJvprnbj1deqds_xTNmEohofHTvZd9LMHhhNDeXhv6OsYlbwmXjoW6QO452Jju_RWI"/>
+<div class="absolute inset-0 bg-primary/10"></div>
+</div>
+<div class="h-32 rounded-xl overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="A top-down view of organized agricultural plots with vibrant green crops, showcasing precision farming techniques. The layout is clean and geometric, emphasizing mathematical harmony and stability. The lighting is bright and clear, reflecting a sophisticated, SaaS-like professional financial ecosystem for agriculture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABBfuy1lT2e1j5hU3Ci5k9MhuV2rM8iqq4797fOjRAzGOAzQtpBKhanO7ckEAyIfOvAODlMfE9dL6-oQcMlOA5Z8_oF1KpReuVy80WUVIowx7e5J6GA5Ff7XTOUtjzYaS_v8IFBLUim9u-l8Ekb_HZ0ImPrUC6KWhgUmpyXYiSX2v-8tbPq_9kRcWyx27wX08UoR9tVxu2BxmUuYIoscNSIbbt6bYc9mHYlKvNZRbQX9tajbf0E67EIAbgr0JlZOj5TlZmZHFwtOE"/>
+<div class="absolute inset-0 bg-primary/10"></div>
+</div>
+</div>
+</main>
+<script>
+        function selectPath(path) {
+            // Remove active classes
+            document.querySelectorAll('.option-card').forEach(card => {
+                card.classList.remove('active');
+            });
+            
+            // Add active class to selected
+            const selectedCard = document.getElementById('path-' + path);
+            selectedCard.classList.add('active');
+            
+            // Enable next button
+            const nextBtn = document.getElementById('next-button');
+            nextBtn.disabled = false;
+            nextBtn.classList.remove('bg-outline', 'cursor-not-allowed', 'opacity-50');
+            nextBtn.classList.add('bg-primary', 'hover:bg-primary-container', 'shadow-md', 'active:scale-95');
+        }
+
+        // Add a simple animation delay for elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.option-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1)';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 200 + (index * 150));
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AgriVerse | Transforming Farmers into Bankable Entrepreneurs</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#c28b0f",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed-variant": "#005233",
+                    "secondary": "#3b6756",
+                    "secondary-fixed-dim": "#a2d1bb",
+                    "on-secondary-fixed": "#002116",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-container": "#3e2a00",
+                    "surface-container-low": "#f1f4f2",
+                    "on-secondary-fixed-variant": "#234f3f",
+                    "on-secondary": "#ffffff",
+                    "surface-tint": "#006c45",
+                    "primary-container": "#1fa971",
+                    "secondary-fixed": "#beedd7",
+                    "primary-fixed": "#7ffaba",
+                    "surface-container-high": "#e5e9e7",
+                    "on-secondary-container": "#406b5a",
+                    "tertiary": "#7d5800",
+                    "on-surface": "#181c1c",
+                    "surface-dim": "#d7dbd9",
+                    "background": "#f6faf8",
+                    "on-primary-fixed": "#002112",
+                    "on-error-container": "#93000a",
+                    "outline-variant": "#bccabf",
+                    "primary": "#006c45",
+                    "on-primary-container": "#003520",
+                    "tertiary-fixed-dim": "#fabc45",
+                    "surface-variant": "#dfe3e1",
+                    "secondary-container": "#bbead4",
+                    "inverse-surface": "#2d3130",
+                    "error": "#ba1a1a",
+                    "on-background": "#181c1c",
+                    "surface-container": "#ebefed",
+                    "inverse-primary": "#61dda0",
+                    "on-tertiary-fixed-variant": "#5f4100",
+                    "on-primary": "#ffffff",
+                    "primary-fixed-dim": "#61dda0",
+                    "on-surface-variant": "#3d4a41",
+                    "surface-container-highest": "#dfe3e1",
+                    "surface-container-lowest": "#ffffff",
+                    "outline": "#6d7a71",
+                    "on-tertiary-fixed": "#271900",
+                    "surface-bright": "#f6faf8",
+                    "surface": "#f6faf8",
+                    "inverse-on-surface": "#eef2f0",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#ffdea9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xl": "80px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "xs": "4px",
+                    "lg": "48px",
+                    "sm": "12px",
+                    "base": "8px",
+                    "md": "24px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Inter"],
+                    "headline-sm": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f6faf8; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(230, 234, 232, 0.5);
+        }
+        .soft-shadow {
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.03);
+        }
+        .pipeline-gradient {
+            background: linear-gradient(90deg, #006c45 0%, #1fa971 100%);
+        }
+        .dot-pattern {
+            background-image: radial-gradient(#bccabf 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 bg-primary border-b border-white/10">
+<div class="flex items-center gap-base">
+<span class="font-headline-md text-headline-md font-bold text-on-primary">AgriVerse</span>
+</div>
+<nav class="hidden md:flex items-center gap-md">
+<a class="text-on-primary font-bold border-b-2 border-on-primary pb-1 font-body-md text-body-md" href="#">Home</a>
+<a class="text-on-primary/70 hover:bg-primary-container/20 transition-colors font-body-md text-body-md px-3 py-1 rounded" href="#">Market</a>
+<a class="text-on-primary/70 hover:bg-primary-container/20 transition-colors font-body-md text-body-md px-3 py-1 rounded" href="#">Academy</a>
+<a class="text-on-primary/70 hover:bg-primary-container/20 transition-colors font-body-md text-body-md px-3 py-1 rounded" href="#">Finance</a>
+</nav>
+<div class="flex items-center gap-md">
+<div class="hidden sm:flex bg-white/10 rounded-full px-4 py-1.5 items-center gap-2">
+<span class="material-symbols-outlined text-on-primary text-sm">search</span>
+<input class="bg-transparent border-none text-on-primary placeholder:text-on-primary/50 focus:ring-0 text-sm w-32" placeholder="Search ecosystem..." type="text"/>
+</div>
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-on-primary cursor-pointer hover:opacity-80">notifications</span>
+<span class="material-symbols-outlined text-on-primary cursor-pointer hover:opacity-80">account_circle</span>
+</div>
+</div>
+</header>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden bg-surface-bright">
+<div class="absolute inset-0 z-0 opacity-20 dot-pattern"></div>
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="grid lg:grid-cols-2 gap-lg items-center">
+<div class="space-y-md animate-in fade-in slide-in-from-left duration-700">
+<div class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Verified Agricultural FinTech</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface leading-tight">
+                            Transforming Farmers into <span class="text-primary">Bankable Entrepreneurs.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                            The Digital Pipeline for verified education, AI-driven intelligence, and secure financial inclusion. Empowering the backbone of Africa's economy.
+                        </p>
+<div class="flex flex-wrap gap-md pt-4">
+<button class="bg-primary hover:bg-primary/90 text-on-primary px-8 py-4 rounded-xl font-headline-sm text-headline-sm transition-all hover:scale-105 soft-shadow">
+                                Join the Ecosystem
+                            </button>
+<button class="border border-outline-variant hover:bg-surface-container-low text-primary px-8 py-4 rounded-xl font-headline-sm text-headline-sm transition-all">
+                                Explore Marketplace
+                            </button>
+</div>
+<div class="flex items-center gap-md pt-8">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-white bg-surface-container" data-alt="Close up portrait of a smiling young African female farmer wearing a green headscarf, bright natural sunlight, high-end commercial photography style, professional and dignified mood." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAcF7eBPwU74nzF_bh-WPX7YlqiuAOCokGpIviqOOkzzh90y4umFAT4WdydC0pK7uDp3atKpWov2DQ13hgxgxKyKPzsOzaSTHYoOxMn1wZ7J1iHmdwqsL4xkJUaTxCBlW4-CHCfhPM6pPgmKps0czRKXC1jgHVlyPVFMzbWgQJbi0xdYPBvlrGPdiCaPtVCA9-OaVg3eOSC6J9LRWRnjhw1NBa0s64DQDrjiM-R3JbQ3tCBcJKyX-17jxq1wZUrmRjb_DYD-8Vi594')"></div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-surface-container" data-alt="Portrait of a middle-aged African male farmer in a clean polo shirt, looking confidently at the camera against a blurred background of a thriving maize field, high-resolution fintech aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBZLmvclK5O99F9GkiZwhEoB0N5bDdfkLnzJDzpVL5NkVFqGAkEKtEctqlukxilYnc74LWEVX8ewl0D_LedbZyAtuaG-h_P5W-7unw10tpLD8IcG6X-cuKSUBRZJwtpmde5sLwQ5YKdbhejO7OHihSECpz1o76UPGSkc7VHrEqj9bzdfq2se-6NVdNwwtj5gOZmFQJ3u7S9c6O-FitDVToL1Pxw6MA5_UwxoUoWLqgojFi_bkerhICiD-IQ0ZEJv3cBTl_tieP_8ls')"></div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-surface-container" data-alt="Portrait of a professional agricultural consultant in the field holding a digital tablet, soft morning light, corporate agricultural aesthetic, shallow depth of field." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuADmWnBqIEEtgWQH50HvWLYI7SB9HjS_CxPoD-eRA5INsoQRWsTnAQbjw-yX6aCosMWY6U3L48b0PrCxp_gbNoPF_m12pZrq1ScODRwroPA4Et-jPSJ3CG6e98xJExaDpdJlQtjUJvvSBUfrkCYXmRXf5Rx48yQcpxSGy4wSTvMMyTfTJDuM6XH6UiBqhH2K5O-HTd49aDznH2yS0nXLI5JjLCWuxJ-UiHMzXN50adAqWZEdLFmkFK74ziZZmhg32C6crHIAC6uk-0')"></div>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant">
+<span class="font-bold text-on-surface">24,000+</span> farmers already verified
+                            </p>
+</div>
+</div>
+<div class="relative lg:h-[600px] rounded-3xl overflow-hidden soft-shadow group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-quality, professional wide shot of a modern African farmer standing proudly in a lush, vibrant green emerald field during the golden hour. The farmer is looking towards the horizon with a sense of hope and progress. The lighting is warm and cinematic, emphasizing textures of the crops and the dignity of the profession. Pristine corporate agricultural style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkFiL8vCP6D3BUT3Tj3ppI1079CDORy0oFN7YWcwEDR8L0rgG7Oyt4-go2ljfvKua5Jsu3X1laAgu7pqrMGMFmlPlv6L-DSEis2uONLt4D7Eq3hsB1rh7R4FmtNsh6dm48OnNmhkLXos8QgFNdbL-ecLcniPSVQGo3qy06RbDqh3hSk6PCj3yaHOWyMEPx_QzPjkOOAfhF3FayTK7ce5MnRrsloBfweBaCrm16zo8CzBc8OTCjStEWPZXK5p3cTMDh6TSIEFD02zY"/>
+<div class="absolute bottom-6 left-6 right-6 glass-card p-md rounded-2xl animate-in fade-in slide-in-from-bottom duration-1000 delay-300">
+<div class="flex items-center justify-between mb-sm">
+<span class="font-label-md text-label-md text-primary">Live Data Stream</span>
+<div class="flex gap-1">
+<div class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-primary/40"></div>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-md">
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Yield Projection</p>
+<p class="font-headline-sm text-headline-sm text-on-surface">+14.2%</p>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Credit Score</p>
+<p class="font-headline-sm text-headline-sm text-tertiary">742</p>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Soil Health</p>
+<p class="font-headline-sm text-headline-sm text-primary">Optimal</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The AgriVerse Digital Pipeline (Infographic) -->
+<section class="py-xl bg-surface-container-lowest">
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center max-w-3xl mx-auto mb-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-sm">The AgriVerse Digital Pipeline</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">A seamless transition from traditional subsistence to modern commercial entrepreneurship through four critical verification stages.</p>
+</div>
+<div class="relative">
+<!-- Connector Line -->
+<div class="absolute top-1/2 left-0 w-full h-0.5 bg-outline-variant hidden lg:block -translate-y-1/2 z-0"></div>
+<div class="grid lg:grid-cols-4 gap-md relative z-10">
+<!-- Step 1 -->
+<div class="bg-white p-md rounded-2xl border border-outline-variant soft-shadow text-center hover:border-primary transition-colors">
+<div class="w-16 h-16 bg-primary-container/10 text-primary rounded-full flex items-center justify-center mx-auto mb-md">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-xs">Education</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Verified 3MTT modules ensuring best agricultural practices.</p>
+</div>
+<!-- Step 2 -->
+<div class="bg-white p-md rounded-2xl border border-outline-variant soft-shadow text-center hover:border-primary transition-colors">
+<div class="w-16 h-16 bg-primary-container/10 text-primary rounded-full flex items-center justify-center mx-auto mb-md">
+<span class="material-symbols-outlined text-3xl">psychology</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-xs">Intelligence</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">AI-driven crop and soil analytics for maximum yield.</p>
+</div>
+<!-- Step 3 -->
+<div class="bg-white p-md rounded-2xl border border-outline-variant soft-shadow text-center hover:border-primary transition-colors">
+<div class="w-16 h-16 bg-primary-container/10 text-primary rounded-full flex items-center justify-center mx-auto mb-md">
+<span class="material-symbols-outlined text-3xl">verified_user</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-xs">Verification</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">On-chain identity and activity logging for credit readiness.</p>
+</div>
+<!-- Step 4 -->
+<div class="bg-white p-md rounded-2xl border border-outline-variant soft-shadow text-center hover:border-primary transition-colors">
+<div class="w-16 h-16 bg-primary-container/10 text-primary rounded-full flex items-center justify-center mx-auto mb-md">
+<span class="material-symbols-outlined text-3xl">account_balance</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-xs">Inclusion</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Direct access to institutional loans and global markets.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- AI Intelligence Layer -->
+<section class="py-xl bg-surface">
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid lg:grid-cols-2 gap-lg items-center">
+<div class="relative order-2 lg:order-1">
+<div class="absolute -inset-4 bg-primary-container/5 rounded-[40px] blur-3xl"></div>
+<div class="relative glass-card p-lg rounded-[32px] border border-outline-variant soft-shadow overflow-hidden">
+<!-- Background effect -->
+<div class="absolute top-0 right-0 p-md">
+<span class="material-symbols-outlined text-primary/20 text-8xl">auto_awesome</span>
+</div>
+<div class="space-y-md">
+<div class="flex items-center gap-sm">
+<div class="bg-blue-600 w-10 h-10 rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">spark</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">AgriAI Advisor</span>
+</div>
+<div class="space-y-sm">
+<div class="bg-surface-container-high p-md rounded-xl rounded-tl-none mr-12">
+<p class="font-body-md text-body-md text-on-surface-variant">Analysis complete. Based on current soil nitrogen levels and weather forecasts for Kaduna, I recommend nitrogen-rich fertilization within the next 48 hours.</p>
+</div>
+<div class="bg-primary text-on-primary p-md rounded-xl rounded-tr-none ml-12">
+<p class="font-body-md text-body-md">Schedule fertilization for Thursday morning?</p>
+</div>
+<div class="bg-surface-container-high p-md rounded-xl rounded-tl-none mr-12">
+<p class="font-body-md text-body-md text-on-surface-variant">Recommended. This action will be logged to your <b>AgriVerse Credit Profile</b>, increasing your credit score by an estimated 15 points.</p>
+</div>
+</div>
+<div class="pt-md border-t border-outline-variant flex justify-between items-center">
+<span class="text-xs text-on-surface-variant italic font-label-sm">Powered by Google Gemini Enterprise</span>
+<button class="bg-primary-container text-on-primary-container px-4 py-2 rounded-lg font-label-md text-label-md">Execute Plan</button>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-md order-1 lg:order-2">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Predictive AI Intelligence Layer</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                            We don't just provide data; we provide insight. Our AI layer integrates satellite imagery, localized weather patterns, and soil sensors to provide actionable advice that directly impacts your bottom line.
+                        </p>
+<ul class="space-y-base">
+<li class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-body-md">Dynamic yield forecasting for accurate financial planning.</span>
+</li>
+<li class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-body-md">Automated pest and disease detection via vision models.</span>
+</li>
+<li class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-body-md">Climate-resilient crop rotation recommendations.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Secure Transactions (Escrow) -->
+<section class="py-xl bg-surface-container-lowest">
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="bg-primary-container/10 rounded-[32px] p-lg border border-primary/10 overflow-hidden relative">
+<div class="absolute -right-20 -bottom-20 opacity-5">
+<span class="material-symbols-outlined text-[300px]">lock</span>
+</div>
+<div class="grid lg:grid-cols-2 gap-lg items-center relative z-10">
+<div class="space-y-md">
+<div class="inline-block bg-[#20D18F]/20 text-[#005233] px-4 py-1.5 rounded-full font-label-md text-label-md">
+                                Partnership with OPay Escrow
+                            </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Secure Transactions &amp; Fair Trade</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                                Eliminate the risk of non-payment. Our integrated escrow system ensures that buyers pay upfront into a secure account, and funds are only released to the farmer once delivery and quality are verified.
+                            </p>
+<div class="flex gap-md pt-md">
+<div class="flex-1 p-md bg-white rounded-2xl border border-outline-variant">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-xs">0%</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Platform defaults to date</p>
+</div>
+<div class="flex-1 p-md bg-white rounded-2xl border border-outline-variant">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-xs">100%</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Payment transparency</p>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-2xl border border-outline-variant p-md soft-shadow">
+<div class="flex items-center justify-between border-b border-outline-variant pb-md mb-md">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 bg-[#20D18F] rounded-lg flex items-center justify-center font-black text-white italic">OPay</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Escrow Holding</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Transaction #8824-X</p>
+</div>
+</div>
+<span class="bg-tertiary/10 text-tertiary px-3 py-1 rounded-full font-label-sm text-label-sm">In Transit</span>
+</div>
+<div class="space-y-md">
+<div class="flex justify-between items-center">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Commodity:</span>
+<span class="font-label-md text-label-md text-on-surface">Premium Soybeans (20 Tons)</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Amount:</span>
+<span class="font-headline-sm text-headline-sm text-primary">₦4,200,000.00</span>
+</div>
+<div class="flex items-center gap-base p-sm bg-surface-container rounded-lg">
+<span class="material-symbols-outlined text-primary text-sm">info</span>
+<span class="text-xs text-on-surface-variant">Funds are secured in OPay Escrow and will be released upon QR verification at the delivery hub.</span>
+</div>
+<button class="w-full py-3 bg-[#20D18F] text-white rounded-xl font-headline-sm text-headline-sm hover:opacity-90 transition-opacity">Track Delivery</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Credit Readiness -->
+<section class="py-xl bg-surface overflow-hidden">
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid lg:grid-cols-5 gap-lg items-center">
+<div class="lg:col-span-3 space-y-md">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Institutional Credit Readiness</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                            Traditional banks struggle to lend to farmers due to a lack of data. AgriVerse solves this by creating a **Digital Credit Score** based on your educational progress, transaction history, and verified agricultural yields.
+                        </p>
+<div class="grid sm:grid-cols-2 gap-md">
+<div class="flex gap-sm">
+<span class="material-symbols-outlined text-tertiary p-2 bg-tertiary/10 rounded-lg">history_edu</span>
+<div>
+<h4 class="font-label-md text-label-md">Educational Proof</h4>
+<p class="text-xs text-on-surface-variant">Completing 3MTT modules boosts trust rating.</p>
+</div>
+</div>
+<div class="flex gap-sm">
+<span class="material-symbols-outlined text-tertiary p-2 bg-tertiary/10 rounded-lg">receipt_long</span>
+<div>
+<h4 class="font-label-md text-label-md">Cashflow Visibility</h4>
+<p class="text-xs text-on-surface-variant">All sales documented via OPay digital receipts.</p>
+</div>
+</div>
+<div class="flex gap-sm">
+<span class="material-symbols-outlined text-tertiary p-2 bg-tertiary/10 rounded-lg">layers</span>
+<div>
+<h4 class="font-label-md text-label-md">Asset Collateral</h4>
+<p class="text-xs text-on-surface-variant">Verified inventory used as digital collateral.</p>
+</div>
+</div>
+<div class="flex gap-sm">
+<span class="material-symbols-outlined text-tertiary p-2 bg-tertiary/10 rounded-lg">query_stats</span>
+<div>
+<h4 class="font-label-md text-label-md">Yield Verification</h4>
+<p class="text-xs text-on-surface-variant">AI-confirmed production historical data.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-2 relative">
+<div class="absolute -inset-10 bg-tertiary/5 rounded-full blur-3xl"></div>
+<div class="relative bg-white border border-outline-variant p-lg rounded-[32px] soft-shadow text-center">
+<p class="font-label-md text-label-md text-on-surface-variant mb-md uppercase tracking-widest">AgriVerse Credit Score</p>
+<div class="relative w-48 h-48 mx-auto mb-md">
+<!-- Simple CSS Gauge -->
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-surface-container" cx="96" cy="96" fill="transparent" r="80" stroke="currentColor" stroke-width="12"></circle>
+<circle class="text-tertiary transition-all duration-1000 ease-out" cx="96" cy="96" fill="transparent" r="80" stroke="currentColor" stroke-dasharray="502" stroke-dashoffset="125" stroke-width="12"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center rotate-90">
+<span class="font-display-lg text-display-lg text-on-surface">782</span>
+<span class="font-label-sm text-label-sm text-primary uppercase">Excellent</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-md rounded-2xl inline-block w-full">
+<p class="font-label-md text-label-md text-on-surface mb-xs">Eligible for Expansion Loan</p>
+<p class="font-headline-sm text-headline-sm text-primary">₦25,000,000</p>
+<button class="mt-md w-full bg-primary text-on-primary py-2 rounded-lg font-label-md text-label-md">Apply Now</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-xl">
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="pipeline-gradient rounded-[40px] p-xl text-center text-on-primary soft-shadow relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 dot-pattern"></div>
+<div class="relative z-10 max-w-2xl mx-auto space-y-md">
+<h2 class="font-display-lg text-display-lg">Ready to Scale Your Farm?</h2>
+<p class="font-body-lg text-body-lg text-on-primary/80">Join the thousands of Nigerian farmers moving from subsistence to professional agricultural entrepreneurship today.</p>
+<div class="flex flex-col sm:flex-row gap-md justify-center pt-md">
+<button class="bg-white text-primary px-8 py-4 rounded-xl font-headline-sm text-headline-sm hover:scale-105 transition-transform soft-shadow">Join the Ecosystem</button>
+<button class="bg-primary-container/20 border border-white/30 text-on-primary px-8 py-4 rounded-xl font-headline-sm text-headline-sm hover:bg-white/10 transition-colors">Contact Partnerships</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#002112] text-white py-xl border-t border-white/5">
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-lg mb-xl">
+<div class="col-span-2">
+<div class="font-headline-md text-headline-md font-black text-primary-fixed-dim mb-md">AgriVerse</div>
+<p class="text-on-primary-fixed-variant font-body-sm text-body-sm max-w-xs mb-md">
+                        Bridging the gap between traditional agriculture and modern financial markets through technology and trust.
+                    </p>
+<div class="flex gap-md">
+<a class="text-white/60 hover:text-white" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-white/60 hover:text-white" href="#"><span class="material-symbols-outlined">link</span></a>
+<a class="text-white/60 hover:text-white" href="#"><span class="material-symbols-outlined">group</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-label-md mb-md text-white">Platform</h4>
+<ul class="space-y-sm text-white/60 font-body-sm text-body-sm">
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">Marketplace</a></li>
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">Learning Hub</a></li>
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">AI Advisor</a></li>
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">Credit Score</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md mb-md text-white">Resources</h4>
+<ul class="space-y-sm text-white/60 font-body-sm text-body-sm">
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">Farmer Guides</a></li>
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">Research Papers</a></li>
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">Community Forum</a></li>
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">Support Center</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md mb-md text-white">Legal</h4>
+<ul class="space-y-sm text-white/60 font-body-sm text-body-sm">
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">Cookie Policy</a></li>
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">Escrow Terms</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md mb-md text-white">Support</h4>
+<ul class="space-y-sm text-white/60 font-body-sm text-body-sm">
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">Live Chat</a></li>
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">Partner API</a></li>
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">Status</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/10 pt-lg flex flex-col md:flex-row justify-between items-center gap-md">
+<p class="text-white/40 font-body-sm text-body-sm">© 2024 AgriVerse Ecosystem. All rights reserved.</p>
+<div class="flex items-center gap-sm">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+<span class="text-white/40 font-body-sm text-body-sm uppercase tracking-widest">Network Operational</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Mobile Bottom NavBar (Hidden on Desktop) -->
+<nav class="lg:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 px-4 pb-safe bg-surface border-t border-outline-variant shadow-[0px_-4px_12px_rgba(0,0,0,0.03)]">
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1 scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<span class="font-label-sm text-label-sm">Market</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">smart_toy</span>
+<span class="font-label-sm text-label-sm">AI Chat</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">workspace_premium</span>
+<span class="font-label-sm text-label-sm">Academy</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-label-sm text-label-sm">Finance</span>
+</a>
+</nav>
+<script>
+        // Simple intersection observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in', 'fade-in', 'duration-1000');
+                    if (entry.target.classList.contains('translate-y-10')) {
+                        entry.target.classList.remove('translate-y-10');
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Search interaction
+        const searchInput = document.querySelector('input[placeholder="Search ecosystem..."]');
+        searchInput.addEventListener('focus', () => {
+            searchInput.parentElement.classList.add('bg-white/20', 'ring-1', 'ring-white/30');
+            searchInput.parentElement.style.width = '240px';
+            searchInput.parentElement.style.transition = 'all 0.3s ease';
+        });
+        searchInput.addEventListener('blur', () => {
+            searchInput.parentElement.classList.remove('bg-white/20', 'ring-1', 'ring-white/30');
+            searchInput.parentElement.style.width = '';
+        });
+    </script>
+</body></html>

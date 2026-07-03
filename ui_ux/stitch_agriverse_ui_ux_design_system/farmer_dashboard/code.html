@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AgriVerse Farmer Dashboard</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#ffdad6",
+                    "outline": "#6d7a71",
+                    "surface-container-low": "#eff5ee",
+                    "surface-variant": "#dee4dd",
+                    "surface-bright": "#f5fbf4",
+                    "on-secondary-container": "#406b5a",
+                    "on-tertiary-fixed-variant": "#5f4100",
+                    "secondary-fixed": "#beedd7",
+                    "on-surface-variant": "#3d4a41",
+                    "tertiary-fixed": "#ffdea9",
+                    "on-secondary-fixed": "#002116",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#e3eae3",
+                    "primary-container": "#1fa971",
+                    "on-surface": "#171d19",
+                    "on-tertiary-fixed": "#271900",
+                    "secondary-fixed-dim": "#a2d1bb",
+                    "on-primary-container": "#003520",
+                    "on-background": "#171d19",
+                    "on-primary-fixed": "#002112",
+                    "primary-fixed-dim": "#61dda0",
+                    "primary": "#006c45",
+                    "on-error": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-dim": "#d5dcd5",
+                    "tertiary": "#7d5800",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#7ffaba",
+                    "surface-tint": "#006c45",
+                    "tertiary-container": "#c28b0f",
+                    "inverse-primary": "#61dda0",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#005233",
+                    "on-tertiary-container": "#3e2a00",
+                    "secondary": "#3b6756",
+                    "inverse-on-surface": "#ecf2eb",
+                    "background": "#f5fbf4",
+                    "surface-container": "#e9f0e8",
+                    "surface-container-highest": "#dee4dd",
+                    "outline-variant": "#bccabf",
+                    "on-secondary-fixed-variant": "#234f3f",
+                    "surface": "#f5fbf4",
+                    "secondary-container": "#bbead4",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#2b322d",
+                    "tertiary-fixed-dim": "#fabc45"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "2xl": "48px",
+                    "xl": "32px",
+                    "margin-mobile": "16px",
+                    "md": "16px",
+                    "3xl": "64px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "lg": "24px",
+                    "xs": "4px",
+                    "sm": "8px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "title-lg": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "headline-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            user-select: none;
+        }
+        .ai-glow {
+            box-shadow: 0 0 20px rgba(47, 128, 237, 0.4);
+        }
+        .bento-card {
+            background-color: #ffffff;
+            border: 1px solid #E6EAE8;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            transition: all 0.2s ease;
+        }
+        .bento-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+            border-color: #006c45;
+        }
+        body {
+            background-color: #F8FAF8;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-surface antialiased pb-24">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-dim w-full sticky top-0 z-50 border-b border-outline-variant dark:border-outline">
+<div class="flex justify-between items-center px-margin-mobile py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-3">
+<div class="relative cursor-pointer active:scale-95 duration-200">
+<img class="w-10 h-10 rounded-full border-2 border-primary-fixed" data-alt="Close-up professional portrait of a confident, smiling modern farmer in a crisp white shirt, photographed against a lush emerald green field at sunrise. The lighting is soft and golden, reflecting high-trust financial quality. The image uses a clean, corporate aesthetic with vibrant natural tones and a sharp focus on the subject." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF4Wt3LyC-JYlHCElzPGcwQxs8N4h88i4Bsm1nxRysL6KgYQBlWXRRPTL-36OHhmsufyZHWFnGfC1ZyEQvAk0PHQiYOwV_TbBkdNBqXxCrhK7Q8y16YRaL0uedlliWZzDL5wSdT2pZAerKjrZXzK4YTOhNZvAsH6zLV2922xX6Jd0Hlt4QxpC67-JZHodmIcFulHYDFj2IQ8CKxB-y46ilega2q9gmUS--Hz8XUAlS4vU497XvFua3hGZtomnTF6z-UwNImV41qtw"/>
+<div class="absolute -bottom-1 -right-1 bg-tertiary-fixed rounded-full p-0.5 shadow-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-[12px] text-on-tertiary-fixed-variant" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<h1 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim font-bold">AgriVerse</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="cursor-pointer active:scale-95 duration-200 text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container-low p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</div>
+</header>
+<main class="px-margin-mobile pt-6 max-w-container-max mx-auto space-y-6">
+<!-- Greeting Section -->
+<section class="space-y-1">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Hello, Samuel</h2>
+<span class="bg-tertiary-container/10 text-tertiary px-2 py-0.5 rounded-full font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+                    Verified
+                </span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Here is what's happening at your farm today.</p>
+</section>
+<!-- Quick Stats: Bento Grid Layout -->
+<section class="grid grid-cols-2 gap-4">
+<!-- Course Progress -->
+<div class="bento-card col-span-2 p-md rounded-xl flex items-center justify-between">
+<div class="space-y-1">
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Course Progress</p>
+<p class="font-headline-md text-headline-md">80% Complete</p>
+<div class="w-full bg-surface-container-high h-2 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full w-[80%] rounded-full"></div>
+</div>
+</div>
+<div class="bg-primary-container/20 p-3 rounded-xl text-primary">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+</div>
+<!-- Credit Score -->
+<div class="bento-card p-md rounded-xl space-y-3 border-tertiary-container/30">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">stars</span>
+<p class="font-label-md text-label-md text-on-surface-variant">Credit Score</p>
+</div>
+<div>
+<p class="font-headline-md text-headline-md text-tertiary">720</p>
+<p class="text-[12px] text-on-surface-variant font-medium">Gold Status</p>
+</div>
+</div>
+<!-- Recent Orders -->
+<div class="bento-card p-md rounded-xl space-y-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">shopping_cart</span>
+<p class="font-label-md text-label-md text-on-surface-variant">Active Orders</p>
+</div>
+<div>
+<p class="font-headline-md text-headline-md text-secondary">2</p>
+<p class="text-[12px] text-on-surface-variant font-medium">In Transit</p>
+</div>
+</div>
+</section>
+<!-- Intelligence Feed -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="font-title-lg text-title-lg text-on-surface">Intelligence Feed</h3>
+<span class="text-primary font-label-md text-label-md flex items-center gap-1 cursor-pointer">
+                    View Insights <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+<!-- Weather Advisory -->
+<div class="bento-card p-lg rounded-xl overflow-hidden relative">
+<div class="flex justify-between items-start z-10 relative">
+<div class="space-y-2">
+<span class="bg-secondary-container/30 text-on-secondary-container px-3 py-1 rounded-full text-label-md font-label-md">Weather Advisory</span>
+<h4 class="font-headline-md text-headline-md">Heavy Rainfall Forecast</h4>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-[240px]">Expect 25mm precipation in the next 48 hours. Consider drainage checks for maize plots.</p>
+</div>
+<span class="material-symbols-outlined text-4xl text-outline-variant">rainy</span>
+</div>
+<div class="mt-4 pt-4 border-t border-outline-variant flex gap-4">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">thermostat</span>
+<span class="font-body-md text-body-md">24°C</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">water_drop</span>
+<span class="font-body-md text-body-md">82% Humidity</span>
+</div>
+</div>
+</div>
+<!-- Market Price Card -->
+<div class="bento-card p-lg rounded-xl border-l-4 border-l-primary">
+<div class="flex justify-between items-center mb-4">
+<h4 class="font-title-lg text-title-lg">Market Trends</h4>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-label-md font-label-md">Live Updates</span>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-surface-container-high rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">grass</span>
+</div>
+<div>
+<p class="font-title-lg text-title-lg text-[16px] leading-tight">Maize</p>
+<p class="text-[12px] text-on-surface-variant">Wholesale Price</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-on-surface">$4.20/kg</p>
+<p class="text-primary text-[12px] flex items-center justify-end gap-1">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +2.4%
+                            </p>
+</div>
+</div>
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-surface-container-high rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">eco</span>
+</div>
+<div>
+<p class="font-title-lg text-title-lg text-[16px] leading-tight">Rice (Long Grain)</p>
+<p class="text-[12px] text-on-surface-variant">Export Rate</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-on-surface">$1.85/kg</p>
+<p class="text-error text-[12px] flex items-center justify-end gap-1">
+<span class="material-symbols-outlined text-[14px]">trending_down</span> -0.8%
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- AI Assistant Entry -->
+<button class="fixed bottom-24 right-6 w-16 h-16 rounded-full bg-[#2F80ED] text-white flex items-center justify-center ai-glow shadow-lg transition-transform active:scale-90 z-40" id="ai-trigger">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="bg-surface dark:bg-surface-container-lowest fixed bottom-0 w-full z-50 rounded-t-xl border-t border-outline-variant dark:border-outline shadow-sm">
+<div class="flex justify-around items-center w-full px-2 py-3">
+<!-- Home (Active) -->
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-on-secondary-container text-on-secondary-container dark:text-secondary-container rounded-full px-4 py-1 transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<!-- Learning -->
+<a class="flex flex-col items-center justify-center text-on-secondary-fixed-variant dark:text-outline p-2 hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="font-label-md text-label-md">Learning</span>
+</a>
+<!-- Market -->
+<a class="flex flex-col items-center justify-center text-on-secondary-fixed-variant dark:text-outline p-2 hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<span class="font-label-md text-label-md">Market</span>
+</a>
+<!-- Wallet -->
+<a class="flex flex-col items-center justify-center text-on-secondary-fixed-variant dark:text-outline p-2 hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="font-label-md text-label-md">Wallet</span>
+</a>
+</div>
+</nav>
+<!-- Micro-interactions Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const aiButton = document.getElementById('ai-trigger');
+            
+            // Pulse animation for AI button
+            setInterval(() => {
+                aiButton.classList.add('scale-105');
+                setTimeout(() => aiButton.classList.remove('scale-105'), 500);
+            }, 3000);
+
+            // Active state feedback on cards
+            const cards = document.querySelectorAll('.bento-card');
+            cards.forEach(card => {
+                card.addEventListener('touchstart', () => {
+                    card.style.transform = 'scale(0.98)';
+                });
+                card.addEventListener('touchend', () => {
+                    card.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
+</body></html>

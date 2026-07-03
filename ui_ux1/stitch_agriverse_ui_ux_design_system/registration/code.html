@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Join AgriVerse - Registration</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#ffdad6",
+                    "outline": "#6d7a71",
+                    "surface-container-low": "#eff5ee",
+                    "surface-variant": "#dee4dd",
+                    "surface-bright": "#f5fbf4",
+                    "on-secondary-container": "#406b5a",
+                    "on-tertiary-fixed-variant": "#5f4100",
+                    "secondary-fixed": "#beedd7",
+                    "on-surface-variant": "#3d4a41",
+                    "tertiary-fixed": "#ffdea9",
+                    "on-secondary-fixed": "#002116",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#e3eae3",
+                    "primary-container": "#1fa971",
+                    "on-surface": "#171d19",
+                    "on-tertiary-fixed": "#271900",
+                    "secondary-fixed-dim": "#a2d1bb",
+                    "on-primary-container": "#003520",
+                    "on-background": "#171d19",
+                    "on-primary-fixed": "#002112",
+                    "primary-fixed-dim": "#61dda0",
+                    "primary": "#006c45",
+                    "on-error": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-dim": "#d5dcd5",
+                    "tertiary": "#7d5800",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#7ffaba",
+                    "surface-tint": "#006c45",
+                    "tertiary-container": "#c28b0f",
+                    "inverse-primary": "#61dda0",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#005233",
+                    "on-tertiary-container": "#3e2a00",
+                    "secondary": "#3b6756",
+                    "inverse-on-surface": "#ecf2eb",
+                    "background": "#f5fbf4",
+                    "surface-container": "#e9f0e8",
+                    "surface-container-highest": "#dee4dd",
+                    "outline-variant": "#bccabf",
+                    "on-secondary-fixed-variant": "#234f3f",
+                    "surface": "#f5fbf4",
+                    "secondary-container": "#bbead4",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#2b322d",
+                    "tertiary-fixed-dim": "#fabc45"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "2xl": "48px",
+                    "xl": "32px",
+                    "margin-mobile": "16px",
+                    "md": "16px",
+                    "3xl": "64px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "lg": "24px",
+                    "xs": "4px",
+                    "sm": "8px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "title-lg": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "headline-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .input-focus-ring:focus-within {
+            box-shadow: 0 0 0 3px rgba(0, 108, 69, 0.1);
+        }
+        body {
+            background-color: #f8faf8;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased overflow-x-hidden">
+<!-- Main Registration Container -->
+<main class="min-h-screen flex flex-col px-margin-mobile pt-xl pb-2xl max-w-md mx-auto relative overflow-hidden">
+<!-- Background Atmospheric Element (Subtle) -->
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 -left-32 w-80 h-80 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Header Section -->
+<header class="mb-xl relative z-10">
+<div class="flex items-center gap-2 mb-lg">
+<div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">agriculture</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary font-bold tracking-tight">AgriVerse</h2>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-2">Join AgriVerse</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Start your journey to becoming a verified entrepreneur.</p>
+</header>
+<!-- Registration Form -->
+<form class="space-y-lg relative z-10" id="registrationForm">
+<!-- Full Name -->
+<div class="space-y-2 group">
+<label class="block font-label-md text-label-md text-on-surface-variant group-focus-within:text-primary transition-colors" for="fullName">Full Name</label>
+<div class="relative flex items-center input-focus-ring transition-shadow rounded-xl">
+<span class="material-symbols-outlined absolute left-4 text-outline">person</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-lowest border border-outline-variant rounded-xl focus:border-primary focus:ring-0 text-on-surface font-body-md transition-all outline-none" id="fullName" placeholder="Enter your full name" required="" type="text"/>
+</div>
+</div>
+<!-- Email Address -->
+<div class="space-y-2 group">
+<label class="block font-label-md text-label-md text-on-surface-variant group-focus-within:text-primary transition-colors" for="email">Email</label>
+<div class="relative flex items-center input-focus-ring transition-shadow rounded-xl">
+<span class="material-symbols-outlined absolute left-4 text-outline">mail</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-lowest border border-outline-variant rounded-xl focus:border-primary focus:ring-0 text-on-surface font-body-md transition-all outline-none" id="email" placeholder="you@example.com" required="" type="email"/>
+</div>
+</div>
+<!-- Phone Number -->
+<div class="space-y-2 group">
+<label class="block font-label-md text-label-md text-on-surface-variant group-focus-within:text-primary transition-colors" for="phone">Phone Number</label>
+<div class="relative flex items-center input-focus-ring transition-shadow rounded-xl">
+<span class="material-symbols-outlined absolute left-4 text-outline">call</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-lowest border border-outline-variant rounded-xl focus:border-primary focus:ring-0 text-on-surface font-body-md transition-all outline-none" id="phone" placeholder="+1 (555) 000-0000" required="" type="tel"/>
+</div>
+</div>
+<!-- State/Region Selection -->
+<div class="space-y-2 group">
+<label class="block font-label-md text-label-md text-on-surface-variant group-focus-within:text-primary transition-colors" for="region">State/Region</label>
+<div class="relative flex items-center input-focus-ring transition-shadow rounded-xl">
+<span class="material-symbols-outlined absolute left-4 text-outline">map</span>
+<select class="w-full pl-12 pr-4 py-4 bg-surface-container-lowest border border-outline-variant rounded-xl focus:border-primary focus:ring-0 text-on-surface font-body-md appearance-none transition-all outline-none cursor-pointer" id="region" required="">
+<option disabled="" selected="" value="">Select your region</option>
+<option value="ca">California, USA</option>
+<option value="tx">Texas, USA</option>
+<option value="ne">Nairobi, Kenya</option>
+<option value="pu">Punjab, India</option>
+<option value="sa">Sao Paulo, Brazil</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Primary CTA -->
+<button class="w-full py-4 px-6 bg-primary text-on-primary rounded-xl font-title-lg text-title-lg shadow-md hover:bg-primary/90 hover:shadow-lg active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2 mt-xl" type="submit">
+                Create Account
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</form>
+<!-- Divider -->
+<div class="relative flex items-center gap-4 my-xl">
+<div class="flex-grow h-px bg-outline-variant"></div>
+<span class="text-label-md font-label-md text-outline uppercase tracking-widest">or</span>
+<div class="flex-grow h-px bg-outline-variant"></div>
+</div>
+<!-- Social Login -->
+<div class="space-y-4 mb-xl">
+<button class="w-full py-4 px-6 bg-surface-container-lowest border border-outline-variant text-on-surface rounded-xl font-body-lg flex items-center justify-center gap-3 hover:bg-surface-container-low transition-colors active:scale-[0.98] duration-200 shadow-sm">
+<svg height="20" viewbox="0 0 24 24" width="20">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 12-4.53z" fill="#EA4335"></path>
+</svg>
+                Continue with Google
+            </button>
+</div>
+<!-- Terms and Footer Link -->
+<footer class="mt-auto pt-lg">
+<p class="text-center font-body-md text-body-md text-on-surface-variant mb-4 px-4">
+                By creating an account, you agree to our 
+                <a class="text-primary font-semibold hover:underline" href="#">Terms of Service</a> and 
+                <a class="text-primary font-semibold hover:underline" href="#">Privacy Policy</a>.
+            </p>
+<div class="flex flex-col items-center gap-2">
+<p class="font-body-lg text-body-lg text-on-surface">Already have an account?</p>
+<a class="inline-flex items-center gap-1 py-2 px-4 text-primary font-bold hover:bg-primary/5 rounded-lg transition-colors active:scale-95" href="#">
+                    Log in
+                    <span class="material-symbols-outlined text-base">login</span>
+</a>
+</div>
+</footer>
+<!-- Bottom Security Badge -->
+<div class="mt-xl flex items-center justify-center gap-2 text-outline opacity-60">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span class="text-label-md font-label-md uppercase tracking-widest">Bank-Grade Security</span>
+</div>
+</main>
+<script>
+        // Micro-interactions for form validation states
+        const form = document.getElementById('registrationForm');
+        const inputs = form.querySelectorAll('input, select');
+
+        inputs.forEach(input => {
+            input.addEventListener('blur', () => {
+                if (input.checkValidity()) {
+                    input.classList.remove('border-outline-variant', 'border-error');
+                    input.classList.add('border-primary-container');
+                } else if (input.value !== "") {
+                    input.classList.remove('border-outline-variant', 'border-primary-container');
+                    input.classList.add('border-error');
+                }
+            });
+
+            input.addEventListener('input', () => {
+                if (input.classList.contains('border-error')) {
+                    input.classList.remove('border-error');
+                    input.classList.add('border-primary');
+                }
+            });
+        });
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            const originalContent = btn.innerHTML;
+            
+            // Artificial loading state
+            btn.disabled = true;
+            btn.innerHTML = `
+                <svg class="animate-spin h-5 w-5 text-on-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Creating Account...
+            `;
+
+            setTimeout(() => {
+                // In a real app, this would redirect
+                alert('Account requested successfully! Please check your email to verify.');
+                btn.disabled = false;
+                btn.innerHTML = originalContent;
+            }, 1500);
+        });
+    </script>
+</body></html>
