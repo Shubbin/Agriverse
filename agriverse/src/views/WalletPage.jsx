@@ -45,7 +45,7 @@ export default function WalletPage({ currentPath }) {
   };
 
   return (
-    <div className="space-y-6 pb-12">
+    <div className="space-y-6 pb-24">
       {/* Header */}
       <section className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
@@ -129,12 +129,16 @@ export default function WalletPage({ currentPath }) {
             
             <div className="divide-y divide-slate-100">
               {transactions.map((tx) => (
-                <div key={tx.id} className="py-3 flex justify-between items-center hover:bg-slate-50 transition-colors">
-                  <div className="space-y-1 pr-4">
-                    <p className="text-sm font-semibold text-on-surface leading-tight">{tx.desc}</p>
-                    <p className="text-[10px] text-outline font-medium">{tx.date} • ID: {tx.id}</p>
+                <div key={tx.id} className="py-3.5 flex justify-between items-start hover:bg-slate-50 transition-colors gap-2">
+                  <div className="space-y-1 min-w-0 flex-1">
+                    <p className="text-sm font-semibold text-on-surface leading-tight truncate">{tx.desc}</p>
+                    <div className="flex flex-wrap items-center gap-x-2 text-[10px] text-outline font-medium">
+                      <span>{tx.date}</span>
+                      <span>•</span>
+                      <span className="font-mono">{tx.id}</span>
+                    </div>
                   </div>
-                  <span className={`font-mono text-sm font-bold whitespace-nowrap ${tx.type === 'credit' ? 'text-primary' : 'text-red-600'}`}>
+                  <span className={`font-mono text-sm font-bold shrink-0 ${tx.type === 'credit' ? 'text-primary' : 'text-red-600'}`}>
                     {tx.amount}
                   </span>
                 </div>

@@ -52,7 +52,7 @@ export default function MarketplacePage() {
   };
 
   return (
-    <div className="space-y-6 pb-12">
+    <div className="space-y-6 pb-24">
       {/* Header */}
       <section className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
@@ -141,7 +141,30 @@ export default function MarketplacePage() {
             </span>
           </div>
 
-          <div className="overflow-x-auto">
+          {/* Card list for mobile screens */}
+          <div className="block md:hidden space-y-4">
+            {escrowOrders.map((order) => (
+              <div key={order.id} className="p-4 border border-outline-variant rounded-xl space-y-2">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <span className="font-mono text-[10px] text-outline">{order.id}</span>
+                    <h4 className="font-bold text-on-surface text-sm leading-snug mt-0.5">{order.item}</h4>
+                  </div>
+                  <span className={`inline-block px-2 py-0.5 rounded-full text-[10px] font-bold ${order.status === 'Locked in Escrow' ? 'bg-amber-50 text-amber-700 border border-amber-200' : 'bg-green-50 text-green-700 border border-green-200'}`}>
+                    {order.status}
+                  </span>
+                </div>
+                <div className="flex justify-between text-xs pt-2 border-t border-slate-100 items-center">
+                  <span className="text-outline">Seller: {order.seller}</span>
+                  <span className="font-black text-primary">{order.amount}</span>
+                </div>
+                <p className="text-[9px] text-outline text-right">{order.date}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Table for desktop screens */}
+          <div className="hidden md:block overflow-x-auto">
             <table className="w-full text-left text-sm">
               <thead>
                 <tr className="border-b border-outline-variant text-outline font-bold">
